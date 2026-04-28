@@ -1,0 +1,12 @@
+package models;
+
+public class AuthModel {
+
+    public boolean autenticar(String usuario, String contrasena) {
+        if (usuario.equals("Admin") && contrasena.equals("1234")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
