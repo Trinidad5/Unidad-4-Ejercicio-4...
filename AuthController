@@ -1,0 +1,75 @@
+package controllers;
+
+import models.AuthModel;
+import views.AuthView;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class AuthController {
+
+	
+	
+    public AuthView vista;
+
+    
+    
+    public AuthController() {
+        vista = new AuthView();
+        
+        
+    }
+
+    public void login() {
+    	
+    	
+    	
+        vista.login(); 
+
+     
+        vista.btnLogin.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	
+            	
+
+                String usuario = vista.campUsuario.getText();
+                String contrasena = new String(vista.campContrasena.getPassword());
+
+                
+                
+                AuthModel modelo = new AuthModel();
+                boolean resultado = modelo.autenticar(usuario, contrasena);
+                
+                
+                
+
+                if (resultado) {
+                    vista.lblMensaje.setForeground(new Color(39, 174, 96));
+                    vista.lblMensaje.setText("¡Bienvenido, " + usuario + "!");
+                    
+                    
+                    
+                } else 
+                
+                
+                {
+                	
+                	
+                	
+                    vista.lblMensaje.setForeground(new Color(192, 57, 43));
+                    vista.lblMensaje.setText("Credenciales incorrectas.");
+                    
+                    
+                }
+            }
+            
+            
+        });
+        
+        
+        
+    }
+    
+    
+    
+}
