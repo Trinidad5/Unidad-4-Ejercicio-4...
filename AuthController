@@ -45,7 +45,7 @@ public class AuthController {
 
                 if (resultado) {
                     vista.lblMensaje.setForeground(new Color(39, 174, 96));
-                    vista.lblMensaje.setText("¡Bienvenido, " + usuario + "!");
+                    vista.lblMensaje.setText("1Bienvenido " + usuario + );
                     
                     
                     
@@ -57,7 +57,7 @@ public class AuthController {
                 	
                 	
                     vista.lblMensaje.setForeground(new Color(192, 57, 43));
-                    vista.lblMensaje.setText("Credenciales incorrectas.");
+                    vista.lblMensaje.setText("Credenciales incorrectas");
                     
                     
                 }
